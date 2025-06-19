@@ -11,20 +11,12 @@ $username   = "user";        // korisničko ime
 $password   = "password";    // lozinka
 $dbname     = "baza";     // naziv baze
 
-// 1) Povezivanje na MySQL server
-$conn = new mysqli($servername, $username, $password);
+// 1) Povezivanje na MySQL bazu
+$conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Greška pri spajanju: " . $conn->connect_error);
 }
 
-// 2) Kreiranje baze (ako ne postoji)
-$sqlCreateDb = "CREATE DATABASE IF NOT EXISTS `$dbname` CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci";
-if (!$conn->query($sqlCreateDb)) {
-    die("Greška pri kreiranju baze: " . $conn->error);
-}
-
-// Odaberemo bazu
-$conn->select_db($dbname);
 
 // 3) Kreiranje tablice (ako ne postoji)
 $sqlCreateTable = "CREATE TABLE IF NOT EXISTS sample_data (
