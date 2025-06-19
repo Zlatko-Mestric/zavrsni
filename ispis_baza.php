@@ -9,9 +9,9 @@
  */
 
 $servername = "localhost";   // adresa MySQL servera
-$username   = "root";        // korisničko ime
+$username   = "user";        // korisničko ime
 $password   = "password";    // lozinka
-$dbname     = "demo_db";     // naziv baze
+$dbname     = "baza";     // naziv baze
 
 // 1) Povezivanje na MySQL server i bazu
 $conn = new mysqli($servername, $username, $password, $dbname);
