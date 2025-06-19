@@ -7,7 +7,7 @@
  */
 
 $servername = "localhost";   // adresa MySQL servera
-$username   = "db_user";        // korisničko ime
+$username   = "user";        // korisničko ime
 $password   = "password";    // lozinka
 $dbname     = "baza";     // naziv baze
 
